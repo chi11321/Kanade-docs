@@ -191,10 +191,10 @@ websocket客户端。
 
 **`socket:write(content: string, packet: e_WSmsgType):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-| 参数      | 类型                                  | 描述   |
-| ------- | ----------------------------------- | ---- |
-| content | string                              | 发送内容 |
-| packet  | [WSmsgType](network.md#e_wsmsgtype) | 数据类型 |
+| 参数      | 类型                                | 描述   |
+| ------- | --------------------------------- | ---- |
+| content | string                            | 发送内容 |
+| packet  | [WSmsgType](network.md#wsmsgtype) | 数据类型 |
 
 写入数据。
 
@@ -216,11 +216,11 @@ websocket客户端。
 
 ### 🔗 `WSmsgType`
 
-| 值   | 描述   |
-| ---- | ------ |
-| 0    | text   |
-| 1    | binary |
-| 2    | ping   |
-| 3    | pong   |
-| 4    | close  |
-| 5    | frame  |
+| 值 | 描述     |
+| - | ------ |
+| 0 | text   |
+| 1 | binary |
+| 2 | ping   |
+| 3 | pong   |
+| 4 | close  |
+| 5 | frame  |
