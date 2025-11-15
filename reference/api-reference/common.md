@@ -14,7 +14,7 @@
 
 ### sleep
 
-**`common.sleep(millis: u64)`**
+**`common.sleep(millis: u64):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 | 参数     | 类型  | 描述       |
 | ------ | --- | -------- |
@@ -33,27 +33,11 @@
 
 在客户端上发送全局通知。
 
-### set\_timeout
-
-**`common.set_timeout(callback: function, time: int)`**
-
-| 参数       | 类型       | 描述 |
-| -------- | -------- | -- |
-| callback | function |    |
-| time     | int      | 毫秒 |
-
-```lua
-common.set_timeout(function()
-    print("1秒后调用")
-end, 1000)
-```
-
-在指定时间后触发回调函数。
-
 ## Variables:
 
-| lua\_path              | lua文件夹路径      |
-| ---------------------- | ------------- |
+| 名称                   | 描述                 |
+| ---------------------- | -------------------- |
+| lua\_path              | lua文件夹路径        |
 | nuclei\_template\_path | nuclei模板文件夹路径 |
 
 ## 🔗 `NotifyType`
