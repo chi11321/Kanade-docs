@@ -6,7 +6,7 @@ description: 高性能的存活检测，端口扫描和指纹识别接口。
 
 ## Functions:
 
-#### alive
+### alive
 
 **`scan.alive(hosts: string, [timeout: u64]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
@@ -29,7 +29,7 @@ end)
 
 ICMP存活扫描。
 
-#### port
+### port
 
 **`scan.port(host: string, ports: table, [protocol_scan: bool, vuln_scanners: u64, timeout: u64]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
@@ -53,13 +53,13 @@ end)
 
 端口扫描。
 
-#### vuln
+### vuln
 
 **`scan.vuln(host: string, port: u16[, scanners: u64, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 跳过协议扫描，强制使用指定的漏洞扫描器进行扫描。
 
-#### nuclei
+### nuclei
 
 **`scan.nuclei():`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
@@ -67,7 +67,7 @@ end)
 
 nuclei模板扫描。
 
-#### port\_range
+### port\_range
 
 **`scan.port(host: string, start: u16, end: u16, [protocol_scan: bool, vuln_scanners: u64, timeout: u64]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
@@ -75,7 +75,7 @@ nuclei模板扫描。
 
 ## Variables:
 
-#### port
+### port
 
 **`scan.port:`** [<mark style="color:purple;">`ScanPort`</mark>](#scanport)
 

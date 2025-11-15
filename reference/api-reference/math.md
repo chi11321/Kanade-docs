@@ -2,7 +2,7 @@
 
 ## Functions:
 
-#### abs
+### abs
 
 `math.abs(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -10,7 +10,7 @@
 
 Returns the absolute value of x.
 
-#### acos
+### acos
 
 `math.acos(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -18,7 +18,7 @@ Returns the absolute value of x.
 
 Returns the arc cosine of x (in radians).
 
-#### asin
+### asin
 
 `math.asin(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -26,7 +26,7 @@ Returns the arc cosine of x (in radians).
 
 Returns the arc sine of x (in radians).
 
-#### atan
+### atan
 
 `math.atan(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -34,7 +34,7 @@ Returns the arc sine of x (in radians).
 
 Returns the arc tangent of x (in radians).
 
-#### atan2
+### atan2
 
 `math.atan2(x: number, y: number):` <mark style="color:purple;">`number`</mark>
 
@@ -42,7 +42,7 @@ Returns the arc tangent of x (in radians).
 
 Returns the arc tangent of y/x (in radians), but uses the signs of both parameters to find the quadrant of the result. (It also handles correctly the case of x being zero.)
 
-#### ceil
+### ceil
 
 `math.ceil(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -50,7 +50,7 @@ Returns the arc tangent of y/x (in radians), but uses the signs of both paramete
 
 Returns the smallest integer larger than or equal to x.
 
-#### clamp
+### clamp
 
 `math.clamp(value: number[, min: number, max: number]):` <mark style="color:purple;">`number`</mark>
 
@@ -58,7 +58,7 @@ Returns the smallest integer larger than or equal to x.
 
 Returns the clamped value.
 
-#### cos
+### cos
 
 `math.cos(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -66,7 +66,7 @@ Returns the clamped value.
 
 Returns the cosine of x (assumed to be in radians).
 
-#### cosh
+### cosh
 
 `math.cosh(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -74,7 +74,7 @@ Returns the cosine of x (assumed to be in radians).
 
 Returns the hyperbolic cosine of x.
 
-#### deg
+### deg
 
 `math.deg(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -82,7 +82,7 @@ Returns the hyperbolic cosine of x.
 
 Returns the angle x (given in radians) in degrees.
 
-#### exp
+### exp
 
 `math.exp(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -90,7 +90,7 @@ Returns the angle x (given in radians) in degrees.
 
 Returns the value e power x.
 
-#### floor
+### floor
 
 `math.floor(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -98,7 +98,7 @@ Returns the value e power x.
 
 Returns the largest integer smaller than or equal to x.
 
-#### fmod
+### fmod
 
 `math.fmod(x: number, y: number):` <mark style="color:purple;">`number`</mark>
 
@@ -106,7 +106,7 @@ Returns the largest integer smaller than or equal to x.
 
 Returns the remainder of the division of x by y that rounds the quotient towards zero.
 
-#### frexp
+### frexp
 
 `math.frexp(x: number):` <mark style="color:purple;">`number`</mark>, <mark style="color:purple;">`number`</mark>
 
@@ -118,7 +118,7 @@ $$
 
 Returns `m` and `e` such that `x = m2e`, `e` is an integer and the absolute value of `m` is in the range `[0.5, 1)` (or zero when `x` is zero).
 
-#### ldexp
+### ldexp
 
 `math.ldexp(x: number, e: number):` <mark style="color:purple;">`number`</mark>
 
@@ -130,7 +130,7 @@ $$
 
 Returns `m2e` (e should be an integer).
 
-#### log
+### log
 
 `math.log(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -138,7 +138,7 @@ Returns `m2e` (e should be an integer).
 
 Returns the natural logarithm of x.
 
-#### log10
+### log10
 
 `math.log10(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -146,7 +146,7 @@ Returns the natural logarithm of x.
 
 Returns the base-10 logarithm of x.
 
-#### map
+### map
 
 `math.map(value: number, in_from: number, in_to: number, out_from: number, out_to: number[, should_clamp: boolean]):` <mark style="color:purple;">`number`</mark>
 
@@ -154,7 +154,7 @@ Returns the base-10 logarithm of x.
 
 Linearly maps two number ranges and returns the mapped value.
 
-#### max
+### max
 
 `math.max(x: number[, ...]):` <mark style="color:purple;">`number`</mark>
 
@@ -162,7 +162,7 @@ Linearly maps two number ranges and returns the mapped value.
 
 Returns the maximum value among its arguments.
 
-#### min
+### min
 
 `math.min(x: number[, ...]):` <mark style="color:purple;">`number`</mark>
 
@@ -170,7 +170,7 @@ Returns the maximum value among its arguments.
 
 Returns the minimum value among its arguments.
 
-#### modf
+### modf
 
 `math.modf(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -178,7 +178,7 @@ Returns the minimum value among its arguments.
 
 Returns two numbers, the integral part of x and the fractional part of x.
 
-#### pow
+### pow
 
 `math.pow(x: number, y: number):` <mark style="color:purple;">`number`</mark>
 
@@ -186,7 +186,7 @@ Returns two numbers, the integral part of x and the fractional part of x.
 
 Returns x^y. (You can also use the expression x^y to compute this value.)
 
-#### rad
+### rad
 
 `math.rad(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -194,7 +194,7 @@ Returns x^y. (You can also use the expression x^y to compute this value.)
 
 Returns the angle x (given in degrees) in radians.
 
-#### random
+### random
 
 `math.random([m [, n]]):` <mark style="color:purple;">`number`</mark>
 
@@ -202,7 +202,7 @@ Returns the angle x (given in degrees) in radians.
 
 This function is an interface to the simple pseudo-random generator function rand provided by ANSI C.When called without arguments, returns a uniform pseudo-random real number in the range \[0,1). When called with an integer number m, math.random returns a uniform pseudo-random integer in the range \[1, m]. When called with two integer numbers m and n, math.random returns a uniform pseudo-random integer in the range \[m, n].
 
-#### randomseed
+### randomseed
 
 `math.randomseed(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -210,7 +210,7 @@ This function is an interface to the simple pseudo-random generator function ran
 
 Sets x as the "seed" for the pseudo-random generator: equal seeds produce equal sequences of numbers.
 
-#### sin
+### sin
 
 `math.sin(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -218,7 +218,7 @@ Sets x as the "seed" for the pseudo-random generator: equal seeds produce equal 
 
 Returns the sine of x (assumed to be in radians).
 
-#### sinh
+### sinh
 
 `math.sinh(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -226,7 +226,7 @@ Returns the sine of x (assumed to be in radians).
 
 Returns the hyperbolic sine of x.
 
-#### sqrt
+### sqrt
 
 `math.sqrt(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -234,7 +234,7 @@ Returns the hyperbolic sine of x.
 
 Returns the square root of x. (You can also use the expression x^0.5 to compute this value.)
 
-#### tan
+### tan
 
 `math.tan(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -242,7 +242,7 @@ Returns the square root of x. (You can also use the expression x^0.5 to compute 
 
 Returns the tangent of x (assumed to be in radians).
 
-#### tanh
+### tanh
 
 `math.tanh(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -252,13 +252,13 @@ Returns the hyperbolic tangent of x.
 
 ## Variables:
 
-#### huge
+### huge
 
 `math.huge:` <mark style="color:purple;">`number`</mark>
 
 The value HUGE\_VAL, a value larger than or equal to any other numerical value.
 
-#### pi
+### pi
 
 `math.pi:` <mark style="color:purple;">`number`</mark>
 

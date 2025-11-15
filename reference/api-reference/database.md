@@ -6,7 +6,7 @@ description: 通过统一接口异步访问各类数据库。
 
 ## Functions:
 
-#### mysql
+### mysql
 
 **`database.mysql(url: string, callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -29,7 +29,7 @@ end)
 
 mysql客户端。
 
-#### postgres
+### postgres
 
 **`database.postgres(url: string, callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -52,7 +52,7 @@ end)
 
 postgres客户端。
 
-#### mssql
+### mssql
 
 **`database.mssql(url: string, callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -75,7 +75,7 @@ end)
 
 mssql客户端。
 
-#### redis
+### redis
 
 **`database.redis(url: string, callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 

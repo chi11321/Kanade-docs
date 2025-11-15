@@ -2,7 +2,7 @@
 
 ## Functions:
 
-#### async
+### async
 
 **`common.async(func: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -12,7 +12,7 @@
 
 创建Future包装。
 
-#### sleep
+### sleep
 
 **`common.sleep(millis: u64):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -22,7 +22,7 @@
 
 在当前线程中异步睡眠。
 
-#### notify
+### notify
 
 **`common.nofity(type: NotifyType, msg: string)`**
 

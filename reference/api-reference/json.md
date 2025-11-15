@@ -6,7 +6,7 @@ description: json序列化和反序列化。
 
 ## Functions:
 
-#### parse
+### parse
 
 **`json.parse(json_text: string):`** <mark style="color:purple;">`table`</mark>
 
@@ -30,7 +30,7 @@ end
 
 反序列化json格式数据。
 
-#### stringify
+### stringify
 
 **`json.stringify(data: any):`** <mark style="color:purple;">`string`</mark>
 

@@ -6,7 +6,7 @@ description: 发送异步网络请求。
 
 ## Functions:
 
-#### http
+### http
 
 **`network.http(url: string[, params: table]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -40,7 +40,7 @@ end)
 
 http(s)请求。
 
-#### proxy
+### proxy
 
 **`network.proxy(url: string[, timeout: u64]):`** <mark style="color:purple;">`Proxy`</mark>
 
@@ -74,7 +74,7 @@ end)
 
 代理客户端，继承所有network方法（除了自身和http\_client）。
 
-#### socket
+### socket
 
 **`network.socket(url: string[, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -85,19 +85,19 @@ end)
 
 socket tcp客户端。
 
-#### tls\_socket
+### tls\_socket
 
 **`network.tls_socket(url: string[, skip_verify: bool, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 tls socket tcp客户端。
 
-#### http\_client
+### http\_client
 
 **`network.http_client([proxy: string, timeout: u64]):`** [<mark style="color:purple;">`HttpClient`</mark>](network.md#httpclient)
 
 创建一个干净的http客户端。
 
-#### websocket
+### websocket
 
 **`network.websocket(url: string [, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 

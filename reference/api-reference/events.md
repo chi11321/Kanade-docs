@@ -6,7 +6,7 @@ description: 脚本间的通信。
 
 ## Functions:
 
-#### :set
+### :set
 
 **`events.event_name:set(hook: function)`**
 
@@ -25,7 +25,7 @@ end)
 
 在指定事件上注册钩子函数。
 
-#### call
+### call
 
 **`events.event_name:call([payload: any])`**
 
@@ -44,7 +44,7 @@ events.event1:call("???")
 
 在指定事件上链式调用所有钩子函数，过程应是无序的，通过HashMap实现。
 
-#### unset
+### unset
 
 **`events.event_name:unset(hook: function)`**
 

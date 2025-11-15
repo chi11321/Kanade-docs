@@ -6,7 +6,7 @@ description: 图形化交互。
 
 ## Functions:
 
-#### create
+### create
 
 **`menu.create(category: string, tab: string, group: string):`** [<mark style="color:purple;">`MenuGroup`</mark>](menu.md#menugroup)
 
@@ -18,7 +18,7 @@ description: 图形化交互。
 
 创建新交互组。
 
-#### set\_icon
+### set\_icon
 
 **`menu.create(category: string, ctx: table):`** [<mark style="color:purple;">`MenuGroup`</mark>](menu.md#menugroup)
 
@@ -35,7 +35,7 @@ menu.set_icon("设置", {"far", "heart", "xs"})
 
 重绘Category图标。[有关图标的信息在此处找到](https://fontawesome.com/search)(仅免费图标)。
 
-#### set\_context\_menu
+### set\_context\_menu
 
 **`menu.set_context_menu(built_in: BuiltInContextMenu, name: string, callback: function)`**
 
