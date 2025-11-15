@@ -4,7 +4,7 @@
 
 ### read
 
-**`clipboard.read():`**<mark style="color:purple;">`string`</mark>
+**`clipboard.read():` **<mark style="color:purple;">`string`</mark>
 
 从剪切板读取字符串。
 
@@ -12,9 +12,7 @@
 
 **`clipboard.write(value: any)`**
 
-**参数:**
-
-| 名称    | 类型     | 描述 |
+| 参数   | 类型     | 描述 |
 | ----- | ------ | -- |
 | value | string |    |
 

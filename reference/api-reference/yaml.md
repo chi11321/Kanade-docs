@@ -8,11 +8,9 @@ description: yaml序列化和反序列化
 
 ### parse
 
-**`yaml.parse(yaml_text: string):`**<mark style="color:purple;">`table`</mark>
+**`yaml.parse(yaml_text: string):` **<mark style="color:purple;">`table`</mark>
 
-**参数:**
-
-| 名称         | 类型     | 描述      |
+| 参数         | 类型     | 描述      |
 | ---------- | ------ | ------- |
 | yaml\_text | string | yaml字符串 |
 
@@ -39,11 +37,9 @@ end
 
 ### stringify
 
-**`yaml.stringify(data: table):`**<mark style="color:purple;">`string`</mark>
+**`yaml.stringify(data: table):` **<mark style="color:purple;">`string`</mark>
 
-**参数:**
-
-| 名称   | 类型    | 描述 |
+| 参数   | 类型    | 描述 |
 | ---- | ----- | -- |
 | data | table |    |
 

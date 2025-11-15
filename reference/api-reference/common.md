@@ -4,11 +4,9 @@
 
 ### async
 
-**`common.async(func: function):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`common.async(func: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称   | 类型       | 描述 |
+| 参数   | 类型       | 描述 |
 | ---- | -------- | -- |
 | func | function |    |
 
@@ -18,9 +16,7 @@
 
 **`common.sleep(millis: u64)`**
 
-**参数:**
-
-| 名称     | 类型  | 描述       |
+| 参数     | 类型  | 描述       |
 | ------ | --- | -------- |
 | millis | u64 | 睡眠时长(毫秒) |
 
@@ -30,9 +26,7 @@
 
 **`common.nofity(type: NotifyType, msg: string)`**
 
-**参数:**
-
-| 名称   | 类型                                   | 描述   |
+| 参数   | 类型                                   | 描述   |
 | ---- | ------------------------------------ | ---- |
 | type | [NotifyType](common.md#e_notifytype) | 通知类型 |
 | msg  | string                               | 通知内容 |
@@ -43,9 +37,7 @@
 
 **`common.set_timeout(callback: function, time: int)`**
 
-**参数:**
-
-| 名称       | 类型       | 描述 |
+| 参数       | 类型       | 描述 |
 | -------- | -------- | -- |
 | callback | function |    |
 | time     | int      | 毫秒 |

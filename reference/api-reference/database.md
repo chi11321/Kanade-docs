@@ -4,17 +4,13 @@ description: 通过统一接口异步访问各类数据库。
 
 # 🗳️ database
 
-### 此接口在Kanade Version>=0.0.6开放。
-
 ## Functions:
 
 ### mysql
 
-**`database.mysql(url: string, callback: function):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`database.mysql(url: string, callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称  | 类型     | 描述 |
+| 参数  | 类型     | 描述 |
 | --- | ------ | -- |
 | url | string |    |
 
@@ -35,11 +31,9 @@ mysql客户端。
 
 ### postgres
 
-**`database.postgres(url: string, callback: function):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`database.postgres(url: string, callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称  | 类型     | 描述 |
+| 参数  | 类型     | 描述 |
 | --- | ------ | -- |
 | url | string |    |
 
@@ -60,11 +54,9 @@ postgres客户端。
 
 ### mssql
 
-**`database.mssql(url: string, callback: function):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`database.mssql(url: string, callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称  | 类型     | 描述 |
+| 参数  | 类型     | 描述 |
 | --- | ------ | -- |
 | url | string |    |
 
@@ -85,11 +77,9 @@ mssql客户端。
 
 ### redis
 
-**`database.redis(url: string, callback: function):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`database.redis(url: string, callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称  | 类型     | 描述 |
+| 参数  | 类型     | 描述 |
 | --- | ------ | -- |
 | url | string |    |
 
@@ -116,11 +106,9 @@ redis客户端。
 
 ### :query
 
-**`dbc:read(query: string):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`dbc:read(query: string):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称    | 类型     | 描述      |
+| 参数    | 类型     | 描述      |
 | ----- | ------ | ------- |
 | query | string | 查询语句/命令 |
 
@@ -134,4 +122,4 @@ redis客户端。
 
 ### :type
 
-**`dbc:type():`**<mark style="color:purple;">`string`</mark>
+**`dbc:type():` **<mark style="color:purple;">`string`</mark>

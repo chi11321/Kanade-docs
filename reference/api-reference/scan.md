@@ -8,11 +8,9 @@ description: 高性能的存活检测，端口扫描和指纹识别接口。
 
 ### alive
 
-**`scan.alive(hosts: string, [timeout: u64]):`**[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`scan.alive(hosts: string, [timeout: u64]):` **[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
-**参数:**
-
-| 名称      | 类型     | 描述              |
+| 参数      | 类型     | 描述              |
 | ------- | ------ | --------------- |
 | hosts   | string | CIDR格式地址        |
 | timeout | u64    | 超时时间（毫秒），默认5000 |
@@ -33,11 +31,9 @@ ICMP存活扫描。
 
 ### port
 
-**`scan.port(host: string, ports: table, [protocol_scan: bool, vuln_scanners: u64, timeout: u64]):`**[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`scan.port(host: string, ports: table, [protocol_scan: bool, vuln_scanners: u64, timeout: u64]):` **[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
-**参数:**
-
-| 名称             | 类型     | 描述                                                                        |
+| 参数             | 类型     | 描述                                                                        |
 | -------------- | ------ | ------------------------------------------------------------------------- |
 | host           | string |                                                                           |
 | ports          | table  | 端口列表                                                                      |
@@ -59,13 +55,13 @@ end)
 
 ### vuln
 
-**`scan.vuln(host: string, port: u16[, scanners: u64, timeout: u64]):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`scan.vuln(host: string, port: u16[, scanners: u64, timeout: u64]):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 跳过协议扫描，强制使用指定的漏洞扫描器进行扫描。
 
 ### nuclei
 
-**`scan.nuclei():`**[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`scan.nuclei():` **[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
 **参数:**
 
@@ -73,7 +69,7 @@ nuclei模板扫描。
 
 ### port\_range
 
-**`scan.port(host: string, start: u16, end: u16, [protocol_scan: bool, vuln_scanners: u64, timeout: u64]):`**[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`scan.port(host: string, start: u16, end: u16, [protocol_scan: bool, vuln_scanners: u64, timeout: u64]):` **[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
 指定范围端口扫描。
 
@@ -165,6 +161,3 @@ nuclei模板扫描。
 | i   | <mark style="color:$info;">string</mark> |
 | o   | <mark style="color:$info;">string</mark> |
 | cpe | <mark style="color:$info;">string</mark> |
-
-
-

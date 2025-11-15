@@ -8,11 +8,9 @@ description: json序列化和反序列化。
 
 ### parse
 
-**`json.parse(json_text: string):`**<mark style="color:purple;">`table`</mark>
+**`json.parse(json_text: string):` **<mark style="color:purple;">`table`</mark>
 
-**参数:**
-
-| 名称         | 类型     | 描述 |
+| 参数         | 类型     | 描述 |
 | ---------- | ------ | -- |
 | json\_text | string |    |
 
@@ -34,11 +32,9 @@ end
 
 ### stringify
 
-**`json.stringify(data: any):`**<mark style="color:purple;">`string`</mark>
+**`json.stringify(data: any):` **<mark style="color:purple;">`string`</mark>
 
-**参数:**
-
-| 名称   | 类型    | 描述 |
+| 参数   | 类型    | 描述 |
 | ---- | ----- | -- |
 | data | table |    |
 

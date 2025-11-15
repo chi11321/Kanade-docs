@@ -8,11 +8,9 @@ description: 发送异步网络请求。
 
 ### http
 
-**`network.http(url: string[, params: table]):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`network.http(url: string[, params: table]):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称     | 类型     | 描述   |
+| 参数     | 类型     | 描述   |
 | ------ | ------ | ---- |
 | url    | string |      |
 | params | table  | 请求参数 |
@@ -44,11 +42,9 @@ http(s)请求。
 
 ### proxy
 
-**`network.proxy(url: string[, timeout: u64]):`**<mark style="color:purple;">`Proxy`</mark>
+**`network.proxy(url: string[, timeout: u64]):` **<mark style="color:purple;">`Proxy`</mark>
 
-**参数:**
-
-| 名称      | 类型     | 描述                   |
+| 参数      | 类型     | 描述                   |
 | ------- | ------ | -------------------- |
 | url     | string | socks4\|socks5\|http |
 | timeout | u64    | 超时(毫秒)               |
@@ -80,11 +76,9 @@ end)
 
 ### socket
 
-**`network.socket(url: string[, timeout: u64]):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`network.socket(url: string[, timeout: u64]):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称      | 类型     | 描述     |
+| 参数      | 类型     | 描述     |
 | ------- | ------ | ------ |
 | url     | string |        |
 | timeout | u64    | 超时(毫秒) |
@@ -93,23 +87,21 @@ socket tcp客户端。
 
 ### tls\_socket
 
-**`network.tls_socket(url: string[, skip_verify: bool, timeout: u64]):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`network.tls_socket(url: string[, skip_verify: bool, timeout: u64]):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 tls socket tcp客户端。
 
 ### http\_client
 
-**`network.http_client([proxy: string, timeout: u64]):`**[<mark style="color:purple;">`HttpClient`</mark>](network.md#httpclient)
+**`network.http_client([proxy: string, timeout: u64]):` **[<mark style="color:purple;">`HttpClient`</mark>](network.md#httpclient)
 
 创建一个干净的http客户端。
 
 ### websocket
 
-**`network.websocket(url: string [, timeout: u64]):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`network.websocket(url: string [, timeout: u64]):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称      | 类型     | 描述     |
+| 参数      | 类型     | 描述     |
 | ------- | ------ | ------ |
 | url     | string |        |
 | timeout | u64    | 超时(毫秒) |
@@ -135,17 +127,15 @@ websocket客户端。
 
 ### :request
 
-**`client:request(url: string[, params: table]):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`client:request(url: string[, params: table]):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 ## 🔗 `SocketStream`
 
 ### :read
 
-**`socket:read(size: number):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`socket:read(size: number):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称   | 类型     | 描述   |
+| 参数   | 类型     | 描述   |
 | ---- | ------ | ---- |
 | size | number | 读取长度 |
 
@@ -153,11 +143,9 @@ websocket客户端。
 
 ### :write
 
-**`ws:write(content: string):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`ws:write(content: string):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称      | 类型     | 描述   |
+| 参数      | 类型     | 描述   |
 | ------- | ------ | ---- |
 | content | string | 发送内容 |
 
@@ -171,11 +159,9 @@ websocket客户端。
 
 ### :write\_all
 
-**`ws:write_all(content: string):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`ws:write_all(content: string):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称      | 类型     | 描述   |
+| 参数      | 类型     | 描述   |
 | ------- | ------ | ---- |
 | content | string | 发送内容 |
 
@@ -183,11 +169,9 @@ websocket客户端。
 
 ### :read\_to\_string
 
-**`socket:read_to_string(size: number):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`socket:read_to_string(size: number):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称   | 类型     | 描述   |
+| 参数   | 类型     | 描述   |
 | ---- | ------ | ---- |
 | size | number | 读取长度 |
 
@@ -197,17 +181,15 @@ websocket客户端。
 
 ### :read
 
-**`ws:read():`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`ws:read():` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 读取回复。
 
 ### :write
 
-**`socket:write(content: string, packet: e_WSmsgType):`**[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`socket:write(content: string, packet: e_WSmsgType):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-**参数:**
-
-| 名称      | 类型                                  | 描述   |
+| 参数      | 类型                                  | 描述   |
 | ------- | ----------------------------------- | ---- |
 | content | string                              | 发送内容 |
 | packet  | [WSmsgType](network.md#e_wsmsgtype) | 数据类型 |
@@ -224,9 +206,7 @@ websocket客户端。
 
 **`socket:listen(callback: function)`**
 
-**参数:**
-
-| 名称       | 类型       | 描述 |
+| 参数       | 类型       | 描述 |
 | -------- | -------- | -- |
 | callback | function |    |
 

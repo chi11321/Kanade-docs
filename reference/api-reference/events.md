@@ -8,11 +8,9 @@ description: 脚本间的通信。
 
 ### set
 
-**`events.set(name: string, hook: function):`**<mark style="color:purple;">`table`</mark>
+**`events.set(name: string, hook: function):` **<mark style="color:purple;">`table`</mark>
 
-**参数:**
-
-| 名称   | 类型       | 描述   |
+| 参数   | 类型       | 描述   |
 | ---- | -------- | ---- |
 | name | string   | 事件名称 |
 | hook | function | 回调函数 |
@@ -30,11 +28,9 @@ end)
 
 ### call
 
-**`events.call(name: string[, payload: any]):`**<mark style="color:purple;">`table`</mark>
+**`events.call(name: string[, payload: any]):` **<mark style="color:purple;">`table`</mark>
 
-**参数:**
-
-| 名称      | 类型     | 描述      |
+| 参数      | 类型     | 描述      |
 | ------- | ------ | ------- |
 | name    | string | 事件名称    |
 | payload | any    | 调用时携带参数 |
@@ -52,11 +48,9 @@ events.call("event1", "???")
 
 ### unset
 
-**`events.unset(name: string, hook: function):`**<mark style="color:purple;">`table`</mark>
+**`events.unset(name: string, hook: function):` **<mark style="color:purple;">`table`</mark>
 
-**参数:**
-
-| 名称   | 类型       | 描述   |
+| 参数   | 类型       | 描述   |
 | ---- | -------- | ---- |
 | name | string   | 事件名称 |
 | hook | function | 回调函数 |
@@ -91,8 +85,3 @@ events.set("protocol_scanned", function(host, port, matchx)
     return host, port, matchx
 end)
 ```
-
-
-
-
-
