@@ -2,7 +2,7 @@
 
 ## Functions:
 
-### arshift
+#### arshift
 
 `bit.arshift(x: number, n: number):` <mark style="color:purple;">`number`</mark>
 
@@ -10,7 +10,7 @@
 
 
 
-### band
+#### band
 
 `bit.band(x1: number, x2: number[, ...]):` <mark style="color:purple;">`number`</mark>
 
@@ -18,7 +18,7 @@
 
 
 
-### bnot
+#### bnot
 
 `bit.bnot(x: number)`: <mark style="color:purple;">`number`</mark>
 
@@ -26,7 +26,7 @@
 
 
 
-### bor
+#### bor
 
 `bit.bor(x1: number, x2: number[, ...]):` <mark style="color:purple;">`number`</mark>
 
@@ -34,7 +34,7 @@
 
 
 
-### bswap
+#### bswap
 
 `bit.bswap(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -42,7 +42,7 @@
 
 
 
-### bxor
+#### bxor
 
 `bit.bxor(x1: number, [x2...]: number):` <mark style="color:purple;">`number`</mark>
 
@@ -50,7 +50,7 @@
 
 
 
-### lshift
+#### lshift
 
 `bit.lshift(x: number, n: number):` <mark style="color:purple;">`number`</mark>
 
@@ -58,7 +58,7 @@
 
 
 
-### rol
+#### rol
 
 `bit.rol(x: number, n: number):` <mark style="color:purple;">`number`</mark>
 
@@ -66,7 +66,7 @@
 
 
 
-### ror
+#### ror
 
 `bit.ror(x: number, n: number):` <mark style="color:purple;">`number`</mark>
 
@@ -74,7 +74,7 @@
 
 
 
-### rshift
+#### rshift
 
 `bit.rshift(x: number, n: number):` <mark style="color:purple;">`number`</mark>
 
@@ -82,7 +82,7 @@
 
 
 
-### tobit
+#### tobit
 
 `bit.tobit(x: number):` <mark style="color:purple;">`number`</mark>
 
@@ -90,7 +90,7 @@
 
 
 
-### tohex
+#### tohex
 
 `bit.tohex(x: number, n: number):` <mark style="color:purple;">`number`</mark>
 

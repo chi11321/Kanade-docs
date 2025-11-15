@@ -2,7 +2,7 @@
 
 ## Functions:
 
-### async
+#### async
 
 **`common.async(func: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -12,7 +12,7 @@
 
 创建Future包装。
 
-### sleep
+#### sleep
 
 **`common.sleep(millis: u64):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -22,7 +22,7 @@
 
 在当前线程中异步睡眠。
 
-### notify
+#### notify
 
 **`common.nofity(type: NotifyType, msg: string)`**
 
@@ -33,14 +33,9 @@
 
 在客户端上发送全局通知。
 
-## Variables:
+## Structs:
 
-| 名称                   | 描述                 |
-| ---------------------- | -------------------- |
-| lua\_path              | lua文件夹路径        |
-| nuclei\_template\_path | nuclei模板文件夹路径 |
-
-## 🔗 `NotifyType`
+### 🔗 `NotifyType`
 
 | 值 | 描述   |
 | - | ---- |

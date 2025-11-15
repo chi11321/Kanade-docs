@@ -6,7 +6,7 @@ description: yaml序列化和反序列化
 
 ## Functions:
 
-### parse
+#### parse
 
 **`yaml.parse(yaml_text: string):`** <mark style="color:purple;">`table`</mark>
 
@@ -35,7 +35,7 @@ end
 
 反序列化yaml格式数据。
 
-### stringify
+#### stringify
 
 **`yaml.stringify(data: table):`** <mark style="color:purple;">`string`</mark>
 

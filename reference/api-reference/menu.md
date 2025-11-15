@@ -6,7 +6,7 @@ description: 图形化交互。
 
 ## Functions:
 
-### create
+#### create
 
 **`menu.create(category: string, tab: string, group: string):`** [<mark style="color:purple;">`MenuGroup`</mark>](menu.md#menugroup)
 
@@ -18,7 +18,7 @@ description: 图形化交互。
 
 创建新交互组。
 
-### set\_icon
+#### set\_icon
 
 **`menu.create(category: string, ctx: table):`** [<mark style="color:purple;">`MenuGroup`</mark>](menu.md#menugroup)
 
@@ -35,7 +35,7 @@ menu.set_icon("设置", {"far", "heart", "xs"})
 
 重绘Category图标。[有关图标的信息在此处找到](https://fontawesome.com/search)(仅免费图标)。
 
-### set\_context\_menu
+#### set\_context\_menu
 
 **`menu.set_context_menu(built_in: BuiltInContextMenu, name: string, callback: function)`**
 
@@ -53,9 +53,11 @@ end)
 
 注册右键菜单。
 
-## 🔗  `MenuGroup`
+## Structs:
 
-### :list
+### 🔗  `MenuGroup`
+
+#### :list
 
 **`tab:table(name: string, value: table):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -71,7 +73,7 @@ local list = example:list("List", {"item1", "item2", "item3"})
 
 在标签页上创建List。
 
-### :table
+#### :table
 
 **`tab:table(name: string, columns: table, data: table):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -99,7 +101,7 @@ local tbl = example:table("Table", {"name", "age", "address"}, {
 
 在标签页上创建Table。
 
-### :input
+#### :input
 
 **`tab:input(name: string[, value: string, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -116,7 +118,7 @@ local input = example:input("Input", "")
 
 在标签页上创建Input。
 
-### :label
+#### :label
 
 **`tab:input(name: string):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -131,7 +133,7 @@ local label = example:label("Label1")
 
 在标签页上创建Label。
 
-### :slider
+#### :slider
 
 **`tab:slider(name: string, min: number, max: number, value: number[, unit: string, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -151,7 +153,7 @@ local slider = example:slider("Slider", 0, 100, 5, "个")
 
 在标签页上创建Slider。
 
-### :select
+#### :select
 
 **`tab:select(name: string, value: string, options: table[, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -169,7 +171,7 @@ local dropdown = example:select("Dropdown", {"Option1", "Option2", "Option3"}, "
 
 在标签页上创建Dropdown select。
 
-### :switch
+#### :switch
 
 **`tab:switch(name: string[, value: boolean]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -185,7 +187,7 @@ local switch = example:switch("Switch", true)
 
 在标签页上创建Switch。
 
-### :button
+#### :button
 
 **`tab:button(name: string):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -200,7 +202,7 @@ local button = example:button("Button")
 
 在标签页上创建Button。
 
-### :input\_area
+#### :input\_area
 
 **`tab:input_area(name: string[, value: string, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -217,7 +219,7 @@ local area = example:input_area("Input something...")
 
 在标签页上创建InputArea。
 
-### :multi\_select
+#### :multi\_select
 
 **`tab:multi_select(name: string, value: table, options: table[, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -235,7 +237,7 @@ local multi_select = example:multi_select("Multi Select", {"Option1", "Option2"}
 
 在标签页上创建Multi select。
 
-### :button\_select
+#### :button\_select
 
 **`tab:button_select(name: string, value: string, options: table[, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
@@ -253,9 +255,9 @@ local button_select = example:button_select("Button Select", "", {"Option1", "Op
 
 在标签页上创建Button select。
 
-## 🔗 `MenuItem`
+### 🔗 `MenuItem`
 
-### :get
+#### :get
 
 **`item:get():`** <mark style="color:purple;">`any`</mark>
 
@@ -267,7 +269,7 @@ print(button_select:get())
 
 获取值。
 
-### :set
+#### :set
 
 **`item:set(value: any)`**
 
@@ -279,7 +281,7 @@ button_select:set("Option2")
 
 设定值。
 
-### :type
+#### :type
 
 **`item:type():`** <mark style="color:purple;">`string`</mark>
 
@@ -291,7 +293,7 @@ print(button_select:type())
 
 获取项目类型。
 
-### :rows
+#### :rows
 
 **`item:rows([r: number]):`** <mark style="color:purple;">`number`</mark>
 
@@ -304,7 +306,7 @@ print(area:rows())
 
 获取或设定item最大高度倍数（仅table、text\_area、list有效），默认值为8，即8个标准item高度（不含间隔高度）。
 
-### :name
+#### :name
 
 **`item:name([values: string]):`** <mark style="color:purple;">`string`</mark>
 
@@ -317,7 +319,7 @@ print(button_select:name())
 
 获取或设定名称。
 
-### :create
+#### :create
 
 **`item:create():`** [<mark style="color:purple;">`MenuGroupo`</mark>](menu.md#menugroup)
 
@@ -330,7 +332,7 @@ local option3 = sub_group:switch("Option3")
 
 在item上创建子组。
 
-### :visible
+#### :visible
 
 **`item:visible([value: boolean]):`** <mark style="color:purple;">`boolean`</mark>
 
@@ -343,7 +345,7 @@ print(button_select:visible())
 
 获取或设定可视状态可视状态。
 
-### :tooltip
+#### :tooltip
 
 **`item:tooltip([value: string]):`** <mark style="color:purple;">`string`</mark>
 
@@ -356,7 +358,7 @@ print(button_select:tooltip())
 
 获取或设定提示。
 
-### :set\_callback
+#### :set\_callback
 
 **`item:set_callback(callback: function)`**
 
@@ -370,7 +372,7 @@ end)
 
 注册回调函数。回调函数在元素被点击/修改值时触发。
 
-### :unset\_callback
+#### :unset\_callback
 
 **`item:unset_callback(callback: function)`**
 
@@ -385,7 +387,7 @@ button_select:set_callback(foo)
 
 注销回调函数。所有回调函数将在脚本被卸载时自动注销。
 
-### set\_context\_menu
+#### set\_context\_menu
 
 **`menu.set_context_menu(name: string, callback: function)`**
 
@@ -401,10 +403,9 @@ local button_select = example:button_select("Button Select", "", {"Option1", "Op
 </strong>    print(value)
 end)
 </code></pre>
-
 注册右键菜单。
 
-## 🔗 `BuiltInContextMenu`&#x20;
+### 🔗 `BuiltInContextMenu`&#x20;
 
 | 值                   | 描述                 |
 | ------------------- | ------------------ |

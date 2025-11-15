@@ -6,7 +6,7 @@ description: 发送异步网络请求。
 
 ## Functions:
 
-### http
+#### http
 
 **`network.http(url: string[, params: table]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -40,7 +40,7 @@ end)
 
 http(s)请求。
 
-### proxy
+#### proxy
 
 **`network.proxy(url: string[, timeout: u64]):`** <mark style="color:purple;">`Proxy`</mark>
 
@@ -74,7 +74,7 @@ end)
 
 代理客户端，继承所有network方法（除了自身和http\_client）。
 
-### socket
+#### socket
 
 **`network.socket(url: string[, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -85,19 +85,19 @@ end)
 
 socket tcp客户端。
 
-### tls\_socket
+#### tls\_socket
 
 **`network.tls_socket(url: string[, skip_verify: bool, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 tls socket tcp客户端。
 
-### http\_client
+#### http\_client
 
 **`network.http_client([proxy: string, timeout: u64]):`** [<mark style="color:purple;">`HttpClient`</mark>](network.md#httpclient)
 
 创建一个干净的http客户端。
 
-### websocket
+#### websocket
 
 **`network.websocket(url: string [, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -123,15 +123,17 @@ end)
 
 websocket客户端。
 
-## 🔗 `HttpClient`
+## Structs:
 
-### :request
+### 🔗 `HttpClient`
+
+#### :request
 
 **`client:request(url: string[, params: table]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-## 🔗 `SocketStream`
+### 🔗 `SocketStream`
 
-### :read
+#### :read
 
 **`socket:read(size: number):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -141,7 +143,7 @@ websocket客户端。
 
 读取原始回复。
 
-### :write
+#### :write
 
 **`ws:write(content: string):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -151,13 +153,13 @@ websocket客户端。
 
 写入数据。
 
-### :close
+#### :close
 
 **`socket:close()`**
 
 关闭连接。
 
-### :write\_all
+#### :write\_all
 
 **`ws:write_all(content: string):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -167,7 +169,7 @@ websocket客户端。
 
 写入所有数据。
 
-### :read\_to\_string
+#### :read\_to\_string
 
 **`socket:read_to_string(size: number):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -177,15 +179,15 @@ websocket客户端。
 
 读取字符串回复。
 
-## 🔗 `WebSocketStream`
+### 🔗 `WebSocketStream`
 
-### :read
+#### :read
 
 **`ws:read():`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 读取回复。
 
-### :write
+#### :write
 
 **`socket:write(content: string, packet: e_WSmsgType):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
@@ -196,13 +198,13 @@ websocket客户端。
 
 写入数据。
 
-### :close
+#### :close
 
 **`ws:close()`**
 
 关闭连接。
 
-### :listen
+#### :listen
 
 **`socket:listen(callback: function)`**
 
@@ -210,7 +212,7 @@ websocket客户端。
 | -------- | -------- | -- |
 | callback | function |    |
 
-## 🔗 `WSmsgType`
+### 🔗 `WSmsgType`
 
 | 值 | 描述     |
 | - | ------ |

@@ -2,13 +2,13 @@
 
 ## Functions:
 
-### read
+#### read
 
 **`clipboard.read():`** <mark style="color:purple;">`string`</mark>
 
 从剪切板读取字符串。
 
-### write
+#### write
 
 **`clipboard.write(value: any)`**
 
