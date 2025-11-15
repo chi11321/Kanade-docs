@@ -8,7 +8,7 @@ description: 图形化交互。
 
 ### create
 
-**`menu.create(category: string, tab: string, group: string):` **[<mark style="color:purple;">`MenuGroup`</mark>](menu.md#menugroup)
+**`menu.create(category: string, tab: string, group: string):`** [<mark style="color:purple;">`MenuGroup`</mark>](menu.md#menugroup)
 
 | 参数       | 类型     | 描述 |
 | -------- | ------ | -- |
@@ -20,7 +20,7 @@ description: 图形化交互。
 
 ### set\_icon
 
-**`menu.create(category: string, ctx: table):` **[<mark style="color:purple;">`MenuGroup`</mark>](menu.md#menugroup)
+**`menu.create(category: string, ctx: table):`** [<mark style="color:purple;">`MenuGroup`</mark>](menu.md#menugroup)
 
 | 参数       | 类型     | 描述 |
 | -------- | ------ | -- |
@@ -57,7 +57,7 @@ end)
 
 ### :list
 
-**`tab:table(name: string, value: table):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:table(name: string, value: table):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数    | 类型     | 描述 |
 | ----- | ------ | -- |
@@ -73,7 +73,7 @@ local list = example:list("List", {"item1", "item2", "item3"})
 
 ### :table
 
-**`tab:table(name: string, columns: table, data: table):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:table(name: string, columns: table, data: table):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数      | 类型     | 描述     |
 | ------- | ------ | ------ |
@@ -101,7 +101,7 @@ local tbl = example:table("Table", {"name", "age", "address"}, {
 
 ### :input
 
-**`tab:input(name: string[, value: string, width: number]):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:input(name: string[, value: string, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数    | 类型     | 描述             |
 | ----- | ------ | -------------- |
@@ -118,7 +118,7 @@ local input = example:input("Input", "")
 
 ### :label
 
-**`tab:input(name: string):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:input(name: string):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数   | 类型     | 描述 |
 | ---- | ------ | -- |
@@ -133,7 +133,7 @@ local label = example:label("Label1")
 
 ### :slider
 
-**`tab:slider(name: string, min: number, max: number, value: number[, unit: string, width: number]):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:slider(name: string, min: number, max: number, value: number[, unit: string, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数    | 类型     | 描述             |
 | ----- | ------ | -------------- |
@@ -153,7 +153,7 @@ local slider = example:slider("Slider", 0, 100, 5, "个")
 
 ### :select
 
-**`tab:select(name: string, value: string, options: table[, width: number]):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:select(name: string, value: string, options: table[, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数      | 类型     | 描述             |
 | ------- | ------ | -------------- |
@@ -171,7 +171,7 @@ local dropdown = example:select("Dropdown", {"Option1", "Option2", "Option3"}, "
 
 ### :switch
 
-**`tab:switch(name: string[, value: boolean]):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:switch(name: string[, value: boolean]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数    | 类型      | 描述 |
 | ----- | ------- | -- |
@@ -187,7 +187,7 @@ local switch = example:switch("Switch", true)
 
 ### :button
 
-**`tab:button(name: string):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:button(name: string):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数   | 类型     | 描述 |
 | ---- | ------ | -- |
@@ -202,7 +202,7 @@ local button = example:button("Button")
 
 ### :input\_area
 
-**`tab:input_area(name: string[, value: string, width: number]):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:input_area(name: string[, value: string, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数    | 类型     | 描述             |
 | ----- | ------ | -------------- |
@@ -219,7 +219,7 @@ local area = example:input_area("Input something...")
 
 ### :multi\_select
 
-**`tab:multi_select(name: string, value: table, options: table[, width: number]):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:multi_select(name: string, value: table, options: table[, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数      | 类型     | 描述             |
 | ------- | ------ | -------------- |
@@ -237,7 +237,7 @@ local multi_select = example:multi_select("Multi Select", {"Option1", "Option2"}
 
 ### :button\_select
 
-**`tab:button_select(name: string, value: string, options: table[, width: number]):` **[<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
+**`tab:button_select(name: string, value: string, options: table[, width: number]):`** [<mark style="color:purple;">`MenuItem`</mark>](menu.md#menuitem)
 
 | 参数      | 类型     | 描述             |
 | ------- | ------ | -------------- |
@@ -257,7 +257,7 @@ local button_select = example:button_select("Button Select", "", {"Option1", "Op
 
 ### :get
 
-**`item:get():` **<mark style="color:purple;">`any`</mark>
+**`item:get():`** <mark style="color:purple;">`any`</mark>
 
 ```lua
 local example = menu.create("Example", "Example", "Example")
@@ -306,7 +306,7 @@ print(area:rows())
 
 ### :name
 
-**`item:name([values: string]):` **<mark style="color:purple;">`string`</mark>
+**`item:name([values: string]):`** <mark style="color:purple;">`string`</mark>
 
 ```lua
 local example = menu.create("Example", "Example", "Example")
@@ -319,7 +319,7 @@ print(button_select:name())
 
 ### :create
 
-**`item:create():` **[<mark style="color:purple;">`MenuGroupo`</mark>](menu.md#menugroup)
+**`item:create():`** [<mark style="color:purple;">`MenuGroupo`</mark>](menu.md#menugroup)
 
 ```lua
 local example = menu.create("Example", "Example", "Example")
@@ -332,7 +332,7 @@ local option3 = sub_group:switch("Option3")
 
 ### :visible
 
-**`item:visible([value: boolean]):` **<mark style="color:purple;">`boolean`</mark>
+**`item:visible([value: boolean]):`** <mark style="color:purple;">`boolean`</mark>
 
 ```lua
 local example = menu.create("Example", "Example", "Example")
@@ -345,7 +345,7 @@ print(button_select:visible())
 
 ### :tooltip
 
-**`item:tooltip([value: string]):` **<mark style="color:purple;">`string`</mark>
+**`item:tooltip([value: string]):`** <mark style="color:purple;">`string`</mark>
 
 ```lua
 local example = menu.create("Example", "Example", "Example")

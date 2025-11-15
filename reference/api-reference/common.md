@@ -4,7 +4,7 @@
 
 ### async
 
-**`common.async(func: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`common.async(func: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 | 参数   | 类型       | 描述 |
 | ---- | -------- | -- |

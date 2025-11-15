@@ -12,23 +12,23 @@ Rust异步是惰性的，需要手动启动，调用and\_then或await来启动�
 
 ### :and\_then
 
-**`future:and_then([callback: function]):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`future:and_then([callback: function]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 在异步线程中非阻塞运行并在完成时回调。
 
 ### :map\_err
 
-**`future:map_err(callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`future:map_err(callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 在错误时回调。
 
 ### :finally
 
-**`future:finally(callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`future:finally(callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 ### :await
 
-**`future:await():` **<mark style="color:purple;">`any`</mark>
+**`future:await():`** <mark style="color:purple;">`any`</mark>
 
 在异步线程中阻塞运行。
 
@@ -38,16 +38,16 @@ Rust异步是惰性的，需要手动启动，调用listen来启动流式异步�
 
 ### :listen
 
-**`future:listen(callback: function):` **[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`future:listen(callback: function):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
 在异步线程中非阻塞运行并在有结果时流式回调。
 
 ### :map\_err
 
-**`future:map_err(callback: function):` **[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`future:map_err(callback: function):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
 ### :finally
 
-**`future:finally(callback: function):` **[<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`future:finally(callback: function):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
 所有任务完成时回调。

@@ -4,7 +4,7 @@
 
 ### read
 
-**`clipboard.read():` **<mark style="color:purple;">`string`</mark>
+**`clipboard.read():`** <mark style="color:purple;">`string`</mark>
 
 从剪切板读取字符串。
 

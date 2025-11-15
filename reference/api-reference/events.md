@@ -8,7 +8,7 @@ description: 脚本间的通信。
 
 ### set
 
-**`events.set(name: string, hook: function):` **<mark style="color:purple;">`table`</mark>
+**`events.set(name: string, hook: function):`** <mark style="color:purple;">`table`</mark>
 
 | 参数   | 类型       | 描述   |
 | ---- | -------- | ---- |
@@ -28,7 +28,7 @@ end)
 
 ### call
 
-**`events.call(name: string[, payload: any]):` **<mark style="color:purple;">`table`</mark>
+**`events.call(name: string[, payload: any]):`** <mark style="color:purple;">`table`</mark>
 
 | 参数      | 类型     | 描述      |
 | ------- | ------ | ------- |
@@ -48,7 +48,7 @@ events.call("event1", "???")
 
 ### unset
 
-**`events.unset(name: string, hook: function):` **<mark style="color:purple;">`table`</mark>
+**`events.unset(name: string, hook: function):`** <mark style="color:purple;">`table`</mark>
 
 | 参数   | 类型       | 描述   |
 | ---- | -------- | ---- |

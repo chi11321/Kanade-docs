@@ -8,7 +8,7 @@ description: 通过统一接口异步访问各类数据库。
 
 ### mysql
 
-**`database.mysql(url: string, callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`database.mysql(url: string, callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 | 参数  | 类型     | 描述 |
 | --- | ------ | -- |
@@ -31,7 +31,7 @@ mysql客户端。
 
 ### postgres
 
-**`database.postgres(url: string, callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`database.postgres(url: string, callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 | 参数  | 类型     | 描述 |
 | --- | ------ | -- |
@@ -54,7 +54,7 @@ postgres客户端。
 
 ### mssql
 
-**`database.mssql(url: string, callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`database.mssql(url: string, callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 | 参数  | 类型     | 描述 |
 | --- | ------ | -- |
@@ -77,7 +77,7 @@ mssql客户端。
 
 ### redis
 
-**`database.redis(url: string, callback: function):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`database.redis(url: string, callback: function):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 | 参数  | 类型     | 描述 |
 | --- | ------ | -- |
@@ -106,7 +106,7 @@ redis客户端。
 
 ### :query
 
-**`dbc:read(query: string):` **[<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`dbc:read(query: string):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 | 参数    | 类型     | 描述      |
 | ----- | ------ | ------- |
@@ -122,4 +122,4 @@ redis客户端。
 
 ### :type
 
-**`dbc:type():` **<mark style="color:purple;">`string`</mark>
+**`dbc:type():`** <mark style="color:purple;">`string`</mark>
