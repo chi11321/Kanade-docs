@@ -33,16 +33,16 @@ ICMP存活扫描。
 
 **`scan.port(host: string, ports: table, [protocol_scan: bool, vuln_scanners: u64, timeout: u64]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
-| 参数             | 类型     | 描述                                                                        |
-| -------------- | ------ | ------------------------------------------------------------------------- |
-| host           | string |                                                                           |
-| ports          | table  | 端口列表                                                                      |
-| protocol\_scan | bool   | 启用协议扫描                                                                    |
-| vuln\_scanners | u64    | 启用的漏洞扫描器，协议扫描未启用时不开启漏洞扫描。应根据[VulnScanType](scan.md#vulnscantype)按位与获取最终值。 |
-| timeout        | u64    | 超时时间（毫秒），默认5000                                                           |
+| 参数             | 类型     | 描述                                                                       |
+| -------------- | ------ | ------------------------------------------------------------------------ |
+| host           | string |                                                                          |
+| ports          | table  | 端口列表                                                                     |
+| protocol\_scan | bool   | 启用协议扫描                                                                   |
+| vuln\_scanners | u64    | 启用的漏洞扫描器，协议扫描未启用时不开启漏洞扫描。应根据[VulnScanType](scan.md#vulnscantype)相加获取最终值。 |
+| timeout        | u64    | 超时时间（毫秒），默认5000                                                          |
 
 ```lua
-scan.port("192.168.31.1", {80, 443}, true, bit.band(0x1, 0x2)):listen(function(res)
+scan.port("192.168.31.1", {80, 443}, true, scan.vuln.ssh + scan.vuln.web):listen(function(res)
     print(json.stringify(res))
 end):map_err(function(e)
     print(e)
