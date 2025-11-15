@@ -77,27 +77,27 @@ nuclei模板扫描。
 
 ### port
 
-**`scan.port:`** [<mark style="color:purple;">`PortScanner`</mark>](#portscanner)
+**`scan.port:`** [<mark style="color:purple;">`PortScanner`</mark>](scan.md#portscanner)
 
-**`scan.vuln:`** [<mark style="color:purple;">`VulnScanner`</mark>](#vulnport)
+**`scan.vuln:`** [<mark style="color:purple;">`VulnScanner`</mark>](scan.md#vulnscanner)
 
 ## Structs:
 
 ### 🔗 `PortScanner`
 
-| 名称      | 类型  | 描述     |
-| --------- | ----- | -------- |
-| all       | table | 全部端口 |
-| common    | table |          |
-| web       | table |          |
-| database  | table |          |
-| network   | table |          |
-| high_rist | table |          |
-| not       | table |          |
+| 名称         | 类型    | 描述   |
+| ---------- | ----- | ---- |
+| all        | table | 全部端口 |
+| common     | table |      |
+| web        | table |      |
+| database   | table |      |
+| network    | table |      |
+| high\_rist | table |      |
+| not        | table |      |
 
 ### 🔗 `VulnScanner`
 
-| 名称     | 类型   |
+| 名称       | 类型     |
 | -------- | ------ |
 | all      | number |
 | ssh      | number |
@@ -106,9 +106,9 @@ nuclei模板扫描。
 
 ### 🔗 `ScanResult`
 
-| 名称    | 类型                                                         |
-| ------- | ------------------------------------------------------------ |
-| type    | [ScanResultType](scan.md#scanresulttype)                     |
+| 名称      | 类型                                                                                                                                                                               |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type    | [ScanResultType](scan.md#scanresulttype)                                                                                                                                         |
 | details | [AliveScanResult](scan.md#alivescanresult)\|[PortScanResult](scan.md#portscanresult)\|[ProtocolScanResult](scan.md#protocolscanresult)\|[VulnScanResult](scan.md#vulnscanresult) |
 
 ### 🔗 `AliveScanResult`
@@ -145,52 +145,52 @@ nuclei模板扫描。
 
 | 名称   | 类型                                                     |
 | ---- | ------------------------------------------------------ |
-| type | <mark style="color:$info;">string</mark>               |
+| type | string                                                 |
 | data | [Match](scan.md#match)\|[SoftMatch](scan.md#softmatch) |
 
 ### 🔗 `Match`
 
-| 名称          | 类型                                       |
-| ----------- | ---------------------------------------- |
-| service     | <mark style="color:$info;">string</mark> |
-| pattern     | <mark style="color:$info;">string</mark> |
-| versioninfo | [VersionInfo](scan.md#versioninfo)       |
+| 名称          | 类型                                 |
+| ----------- | ---------------------------------- |
+| service     | string                             |
+| pattern     | string                             |
+| versioninfo | [VersionInfo](scan.md#versioninfo) |
 
 ### 🔗 `SoftMatch`
 
-| 名称      | 类型                                       |
-| ------- | ---------------------------------------- |
-| service | <mark style="color:$info;">string</mark> |
-| pattern | <mark style="color:$info;">string</mark> |
+| 名称      | 类型     |
+| ------- | ------ |
+| service | string |
+| pattern | string |
 
 ### 🔗 `VersionInfo`
 
-| 名称  | 类型                                       |
-| --- | ---------------------------------------- |
-| p   | <mark style="color:$info;">string</mark> |
-| v   | <mark style="color:$info;">string</mark> |
-| h   | <mark style="color:$info;">string</mark> |
-| i   | <mark style="color:$info;">string</mark> |
-| o   | <mark style="color:$info;">string</mark> |
-| cpe | <mark style="color:$info;">string</mark> |
+| 名称  | 类型     |
+| --- | ------ |
+| p   | string |
+| v   | string |
+| h   | string |
+| i   | string |
+| o   | string |
+| cpe | string |
 
 ## Enumerates:
 
 ### 🔗 `VulnScanType`
 
-| 值   | 描述     |
-| ---- | -------- |
-| 0x0  | NONE     |
-| 0x1  | WEB      |
-| 0x2  | SSH      |
-| 0x3  | DATABASE |
+| 值   | 描述       |
+| --- | -------- |
+| 0x0 | NONE     |
+| 0x1 | WEB      |
+| 0x2 | SSH      |
+| 0x3 | DATABASE |
 
 ### 🔗 `ScanResultType`
 
-| 值   | 描述      |
-| ---- | --------- |
-| 0    | ALIVE     |
-| 1    | PORT      |
-| 2    | PROTOCOL  |
-| 3    | VULN      |
-| 4    | COMPLETED |
+| 值 | 描述        |
+| - | --------- |
+| 0 | ALIVE     |
+| 1 | PORT      |
+| 2 | PROTOCOL  |
+| 3 | VULN      |
+| 4 | COMPLETED |
