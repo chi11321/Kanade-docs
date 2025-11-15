@@ -42,7 +42,7 @@ ICMP存活扫描。
 | timeout        | u64    | 超时时间（毫秒），默认5000                                                          |
 
 ```lua
-scan.port("192.168.31.1", {80, 443}, true, scan.vuln.ssh + scan.vuln.web):listen(function(res)
+scan.port("192.168.31.1", scan.port.web, true, scan.vuln.ssh + scan.vuln.web):listen(function(res)
     print(json.stringify(res))
 end):map_err(function(e)
     print(e)
