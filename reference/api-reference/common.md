@@ -26,10 +26,10 @@
 
 **`common.nofity(type: NotifyType, msg: string)`**
 
-| 参数   | 类型                                   | 描述   |
-| ---- | ------------------------------------ | ---- |
-| type | [NotifyType](common.md#e_notifytype) | 通知类型 |
-| msg  | string                               | 通知内容 |
+| 参数 | 类型                               | 描述     |
+| ---- | ---------------------------------- | -------- |
+| type | [NotifyType](common.md#notifytype) | 通知类型 |
+| msg  | string                             | 通知内容 |
 
 在客户端上发送全局通知。
 

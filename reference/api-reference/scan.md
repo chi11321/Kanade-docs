@@ -77,11 +77,13 @@ nuclei模板扫描。
 
 ### port
 
-**`scan.port:`** [<mark style="color:purple;">`ScanPort`</mark>](#scanport)
+**`scan.port:`** [<mark style="color:purple;">`PortScanner`</mark>](#portscanner)
+
+**`scan.vuln:`** [<mark style="color:purple;">`VulnScanner`</mark>](#vulnport)
 
 ## Structs:
 
-### 🔗 `ScanPort`
+### 🔗 `PortScanner`
 
 | 名称      | 类型  | 描述     |
 | --------- | ----- | -------- |
@@ -92,6 +94,15 @@ nuclei模板扫描。
 | network   | table |          |
 | high_rist | table |          |
 | not       | table |          |
+
+### 🔗 `VulnScanner`
+
+| 名称     | 类型   |
+| -------- | ------ |
+| all      | number |
+| ssh      | number |
+| web      | number |
+| database | number |
 
 ### 🔗 `ScanResult`
 
