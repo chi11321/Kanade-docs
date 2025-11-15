@@ -8,12 +8,12 @@ description: 高性能的存活检测，端口扫描和指纹识别接口。
 
 ### alive
 
-**`scan.alive(hosts: string, [timeout: u64]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`scan.alive(hosts: string, [timeout: number]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
-| 参数      | 类型     | 描述              |
-| ------- | ------ | --------------- |
-| hosts   | string | CIDR格式地址        |
-| timeout | u64    | 超时时间（毫秒），默认5000 |
+| 参数    | 类型   | 描述                       |
+| ------- | ------ | -------------------------- |
+| hosts   | string | CIDR格式地址               |
+| timeout | number | 超时时间（毫秒），默认5000 |
 
 ```lua
 scan.alive("192.168.31.0/24"):listen(function(res)
@@ -31,15 +31,15 @@ ICMP存活扫描。
 
 ### port
 
-**`scan.port(host: string, ports: table, [protocol_scan: bool, vuln_scanners: u64, timeout: u64]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`scan.port(host: string, ports: table, [protocol_scan: bool, vuln_scanners: number, timeout: number]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
-| 参数             | 类型     | 描述                                                                       |
-| -------------- | ------ | ------------------------------------------------------------------------ |
-| host           | string |                                                                          |
-| ports          | table  | 端口列表                                                                     |
-| protocol\_scan | bool   | 启用协议扫描                                                                   |
-| vuln\_scanners | u64    | 启用的漏洞扫描器，协议扫描未启用时不开启漏洞扫描。应根据[VulnScanType](scan.md#vulnscantype)相加获取最终值。 |
-| timeout        | u64    | 超时时间（毫秒），默认5000                                                          |
+| 参数           | 类型   | 描述                                                         |
+| -------------- | ------ | ------------------------------------------------------------ |
+| host           | string |                                                              |
+| ports          | table  | 端口列表                                                     |
+| protocol\_scan | bool   | 启用协议扫描                                                 |
+| vuln\_scanners | number | 启用的漏洞扫描器，协议扫描未启用时不开启漏洞扫描。应根据[VulnScanType](scan.md#vulnscantype)相加获取最终值。 |
+| timeout        | number | 超时时间（毫秒），默认5000                                   |
 
 ```lua
 scan.port("192.168.31.1", scan.port.web, true, scan.vuln.ssh + scan.vuln.web):listen(function(res)
@@ -55,7 +55,7 @@ end)
 
 ### vuln
 
-**`scan.vuln(host: string, port: u16[, scanners: u64, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`scan.vuln(host: string, port: number(u16)[, scanners: number, timeout: number]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 跳过协议扫描，强制使用指定的漏洞扫描器进行扫描。
 
@@ -69,7 +69,7 @@ nuclei模板扫描。
 
 ### port\_range
 
-**`scan.port(host: string, start: u16, end: u16, [protocol_scan: bool, vuln_scanners: u64, timeout: u64]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`scan.port(host: string, start: number(u16), end: number(u16), [protocol_scan: bool, vuln_scanners: number, timeout: number]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
 指定范围端口扫描。
 
@@ -121,24 +121,24 @@ nuclei模板扫描。
 
 ### 🔗 `PortScanResult`
 
-| 名称   | 类型      | 描述 |
-| ---- | ------- | -- |
-| port | u16     |    |
-| open | boolean |    |
+| 名称 | 类型        | 描述 |
+| ---- | ----------- | ---- |
+| port | number(u16) |      |
+| open | boolean     |      |
 
 ### 🔗 `ProtocolScanResult`
 
-| 名称     | 类型                            | 描述 |
-| ------ | ----------------------------- | -- |
-| port   | u16                           |    |
-| matchx | [MatchX](scan.md#matchx)\|nil |    |
+| 名称   | 类型                          | 描述 |
+| ------ | ----------------------------- | ---- |
+| port   | number(u16)                   |      |
+| matchx | [MatchX](scan.md#matchx)\|nil |      |
 
 ### 🔗 `VulnScanResult`
 
-| 名称   | 类型                                   | 描述                                                   |
-| ---- | ------------------------------------ | ---------------------------------------------------- |
-| type | [VulnScanType](scan.md#vulnscantype) |                                                      |
-| port | u16                                  |                                                      |
+| 名称 | 类型                                 | 描述                                                         |
+| ---- | ------------------------------------ | ------------------------------------------------------------ |
+| type | [VulnScanType](scan.md#vulnscantype) |                                                              |
+| port | number(u16)                          |                                                              |
 | vuln | table                                | 类型太多了，并且计划支持自定义协议的扫描器，写不过来建议用json序列化看一下每个VulnInfo的结构 |
 
 ### 🔗 `MatchX`

@@ -14,11 +14,11 @@
 
 ### sleep
 
-**`common.sleep(millis: u64):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`common.sleep(millis: number):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-| 参数     | 类型  | 描述       |
-| ------ | --- | -------- |
-| millis | u64 | 睡眠时长(毫秒) |
+| 参数   | 类型   | 描述           |
+| ------ | ------ | -------------- |
+| millis | number | 睡眠时长(毫秒) |
 
 在当前线程中异步睡眠。
 

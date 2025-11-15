@@ -10,10 +10,10 @@ description: 发送异步网络请求。
 
 **`network.http(url: string[, params: table]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-| 参数     | 类型     | 描述   |
-| ------ | ------ | ---- |
-| url    | string |      |
-| params | table  | 请求参数 |
+| 参数   | 类型               | 描述     |
+| ------ | ------------------ | -------- |
+| url    | string             |          |
+| params | table(HttpOptions) | 请求参数 |
 
 ```lua
 network.http("https://www.baidu.com/", {
@@ -42,12 +42,12 @@ http(s)请求。
 
 ### proxy
 
-**`network.proxy(url: string[, timeout: u64]):`** <mark style="color:purple;">`Proxy`</mark>
+**`network.proxy(url: string[, timeout: number]):`** <mark style="color:purple;">`Proxy`</mark>
 
-| 参数      | 类型     | 描述                   |
+| 参数    | 类型   | 描述                 |
 | ------- | ------ | -------------------- |
 | url     | string | socks4\|socks5\|http |
-| timeout | u64    | 超时(毫秒)               |
+| timeout | number | 超时(毫秒)           |
 
 ```lua
 local proxier = network.proxy("socks5://127.0.0.1:7897")
@@ -76,35 +76,35 @@ end)
 
 ### socket
 
-**`network.socket(url: string[, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`network.socket(url: string[, timeout: number]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-| 参数      | 类型     | 描述     |
-| ------- | ------ | ------ |
-| url     | string |        |
-| timeout | u64    | 超时(毫秒) |
+| 参数    | 类型   | 描述       |
+| ------- | ------ | ---------- |
+| url     | string |            |
+| timeout | number | 超时(毫秒) |
 
 socket tcp客户端。
 
 ### tls\_socket
 
-**`network.tls_socket(url: string[, skip_verify: bool, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`network.tls_socket(url: string[, skip_verify: bool, timeout: number]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
 tls socket tcp客户端。
 
 ### http\_client
 
-**`network.http_client([proxy: string, timeout: u64]):`** [<mark style="color:purple;">`HttpClient`</mark>](network.md#httpclient)
+**`network.http_client([proxy: string, timeout: number]):`** [<mark style="color:purple;">`HttpClient`</mark>](network.md#httpclient)
 
 创建一个干净的http客户端。
 
 ### websocket
 
-**`network.websocket(url: string [, timeout: u64]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
+**`network.websocket(url: string [, timeout: number]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-| 参数      | 类型     | 描述     |
-| ------- | ------ | ------ |
-| url     | string |        |
-| timeout | u64    | 超时(毫秒) |
+| 参数    | 类型   | 描述       |
+| ------- | ------ | ---------- |
+| url     | string |            |
+| timeout | number | 超时(毫秒) |
 
 ```lua
 network.websocket("wss://toolin.cn/echo"):and_then(function(ws)
@@ -130,6 +130,15 @@ websocket客户端。
 #### :request
 
 **`client:request(url: string[, params: table]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
+
+### 🔗 `HttpOptions`
+
+| 名称    | 类型        | 描述 |
+| ------- | ----------- | ---- |
+| method  | string\|nil |      |
+| headers | table\|nil  |      |
+| body    | string\|nil |      |
+| timeout | number\|nil |      |
 
 ### 🔗 `SocketStream`
 
