@@ -212,13 +212,15 @@ websocket客户端。
 | -------- | -------- | -- |
 | callback | function |    |
 
+## Enumerates:
+
 ### 🔗 `WSmsgType`
 
-| 值 | 描述     |
-| - | ------ |
-| 0 | text   |
-| 1 | binary |
-| 2 | ping   |
-| 3 | pong   |
-| 4 | close  |
-| 5 | frame  |
+| 值   | 描述   |
+| ---- | ------ |
+| 0    | text   |
+| 1    | binary |
+| 2    | ping   |
+| 3    | pong   |
+| 4    | close  |
+| 5    | frame  |

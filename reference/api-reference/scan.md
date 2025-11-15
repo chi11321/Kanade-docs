@@ -100,16 +100,6 @@ nuclei模板扫描。
 | type    | [ScanResultType](scan.md#scanresulttype)                     |
 | details | [AliveScanResult](scan.md#alivescanresult)\|[PortScanResult](scan.md#portscanresult)\|[ProtocolScanResult](scan.md#protocolscanresult)\|[VulnScanResult](scan.md#vulnscanresult) |
 
-### 🔗 `ScanResultType`
-
-| 值 | 描述        |
-| - | --------- |
-| 0 | ALIVE     |
-| 1 | PORT      |
-| 2 | PROTOCOL  |
-| 3 | VULN      |
-| 4 | COMPLETED |
-
 ### 🔗 `AliveScanResult`
 
 | 名称   | 类型          | 描述 |
@@ -139,15 +129,6 @@ nuclei模板扫描。
 | type | u16   |                                                      |
 | port | u16   |                                                      |
 | vuln | table | 类型太多了，并且计划支持自定义协议的扫描器，写不过来建议用json序列化看一下每个VulnInfo的结构 |
-
-### 🔗 `VulnScanType`
-
-| 值   | 描述       |
-| --- | -------- |
-| 0x0 | NONE     |
-| 0x1 | WEB      |
-| 0x2 | SSH      |
-| 0x3 | DATABASE |
 
 ### 🔗 `MatchX`
 
@@ -181,3 +162,24 @@ nuclei模板扫描。
 | i   | <mark style="color:$info;">string</mark> |
 | o   | <mark style="color:$info;">string</mark> |
 | cpe | <mark style="color:$info;">string</mark> |
+
+## Enumerates:
+
+### 🔗 `VulnScanType`
+
+| 值   | 描述     |
+| ---- | -------- |
+| 0x0  | NONE     |
+| 0x1  | WEB      |
+| 0x2  | SSH      |
+| 0x3  | DATABASE |
+
+### 🔗 `ScanResultType`
+
+| 值   | 描述      |
+| ---- | --------- |
+| 0    | ALIVE     |
+| 1    | PORT      |
+| 2    | PROTOCOL  |
+| 3    | VULN      |
+| 4    | COMPLETED |
