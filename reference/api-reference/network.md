@@ -10,10 +10,10 @@ description: 发送异步网络请求。
 
 **`network.http(url: string[, params: table]):`** [<mark style="color:purple;">`Future`</mark>](future.md#future)
 
-| 参数   | 类型               | 描述     |
-| ------ | ------------------ | -------- |
-| url    | string             |          |
-| params | table(HttpOptions) | 请求参数 |
+| 参数   | 类型                                         | 描述     |
+| ------ | -------------------------------------------- | -------- |
+| url    | string                                       |          |
+| params | table([HttpOptions](network.md#httpoptions)) | 请求参数 |
 
 ```lua
 network.http("https://www.baidu.com/", {

@@ -61,11 +61,15 @@ end)
 
 ### nuclei
 
-**`scan.nuclei():`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
+**`scan.nuclei(cfg: table):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
-**参数:**
+| 参数 | 类型                                                | 描述 |
+| ---- | --------------------------------------------------- | ---- |
+| cfg  | table([NucleiScanConfig](scan.md#nucleiscanconfig)) |      |
 
-nuclei模板扫描。
+nuclei模板扫描。nuclei扫描是非常消耗内存资源的操作，模板加载并不是复用的，应在单个扫描线程中选中更多扫描目标，而不是为少量目标单独创建多个扫描线程。
+
+为[Kanade的nuclei运行时libnuclei](https://github.com/chi11321/nuclei/tree/main)贡献并发扫描代码，根据重要程度可以获得不同时长Kanade订阅。
 
 ### port\_range
 
@@ -103,6 +107,15 @@ nuclei模板扫描。
 | ssh      | number |
 | web      | number |
 | database | number |
+
+### 🔗 `NucleiScanConfig`
+
+| 名称 | 类型 |
+| ---- | ---- |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
 
 ### 🔗 `ScanResult`
 
