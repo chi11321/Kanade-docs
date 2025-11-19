@@ -77,10 +77,9 @@ events.event1:set(cb)
 
 ```lua
 events.protocol_scanned:set(function(ctx)
-    local (host, port, matchx) = ctx
-    print(host, port, matchx and json.stringify(matchx) or "")
+    print(ctx.host, ctx.port, ctx.matchx and json.stringify(ctx.matchx) or "")
     -- 这会使所有被识别的协议都被修改为 kanade
-    if matchx then matchx.data.service = "kanade" end 
-    return host, port, matchx
+    if ctx.matchx then ctx,matchx.data.service = "kanade" end 
+    return ctx
 end)
 ```
