@@ -76,7 +76,8 @@ events.event1:set(cb)
 在钩子函数上你可以修改原始返回值。
 
 ```lua
-events.protocol_scanned:set(function(host, port, matchx)
+events.protocol_scanned:set(function(ctx)
+    local (host, port, matchx) = ctx
     print(host, port, matchx and json.stringify(matchx) or "")
     -- 这会使所有被识别的协议都被修改为 kanade
     if matchx then matchx.data.service = "kanade" end 
