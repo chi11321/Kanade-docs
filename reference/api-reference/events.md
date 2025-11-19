@@ -10,8 +10,8 @@ description: 脚本间的通信。
 
 **`events.event_name:set(hook: function)`**
 
-| 参数 | 类型     | 描述     |
-| ---- | -------- | -------- |
+| 参数   | 类型       | 描述   |
+| ---- | -------- | ---- |
 | hook | function | 回调函数 |
 
 ```lua
@@ -29,9 +29,9 @@ end)
 
 **`events.event_name:call([payload: any])`**
 
-| 参数    | 类型 | 描述           |
-| ------- | ---- | -------------- |
-| payload | any  | 调用时携带参数 |
+| 参数      | 类型  | 描述      |
+| ------- | --- | ------- |
+| payload | any | 调用时携带参数 |
 
 ```lua
 local cb = function(msg)
@@ -48,8 +48,8 @@ events.event1:call("???")
 
 **`events.event_name:unset(hook: function)`**
 
-| 参数 | 类型     | 描述     |
-| ---- | -------- | -------- |
+| 参数   | 类型       | 描述   |
+| ---- | -------- | ---- |
 | hook | function | 回调函数 |
 
 ```lua
@@ -64,14 +64,14 @@ events.event1:set(cb)
 
 ## 🔗 `内置事件`
 
-| 名称              | 描述                                 | 参数                                                         |
-| ----------------- | ------------------------------------ | ------------------------------------------------------------ |
-| unload            | 当前脚本卸载时触发（仅当前脚本触发） |                                                              |
-| port\_scanned     | 端口扫描返回结果时触发钩子函数       | (host: <mark style="color:purple;">`string`</mark> ,port: <mark style="color:purple;">`number`</mark>) |
-| alive\_scanned    | 存活扫描返回结果时触发钩子函数       | (host: <mark style="color:purple;">`string`</mark>)          |
-| protocol\_scanned | 协议扫描返回结果时触发钩子函数       | (host: <mark style="color:purple;">`string`</mark>, port: <mark style="color:purple;">`number`</mark>,matchx: [<mark style="color:purple;">`IMatchX`</mark>](events.md#imatchx)) |
-| vuln\_scanned     | 漏洞扫描返回结果时触发钩子函数       | (url: <mark style="color:purple;">`string`</mark>, vuln: <mark style="color:purple;">`string`</mark>) |
-| nuclei_template   | Nuclei模板扫描返回结果时触发钩子函数 |                                                              |
+| 名称                | 描述                    | 参数                                                      |
+| ----------------- | --------------------- | ------------------------------------------------------- |
+| unload            | 当前脚本卸载时触发（仅当前脚本触发）    |                                                         |
+| port\_scanned     | 端口扫描返回结果时触发钩子函数       | (ctx: [PortScanResult](scan.md#portscanresult))         |
+| alive\_scanned    | 存活扫描返回结果时触发钩子函数       | (ctx: [AliveScanResult](scan.md#alivescanresult))       |
+| protocol\_scanned | 协议扫描返回结果时触发钩子函数       | (ctx: [ProtocolScanResult](scan.md#protocolscanresult)) |
+| vuln\_scanned     | 漏洞扫描返回结果时触发钩子函数       | (ctx: [VulnScanResult](scan.md#vulnscanresult))         |
+| nuclei\_template  | Nuclei模板扫描返回结果时触发钩子函数 | (ctx: [NucleiMessage](scan.md#nucleimessage))           |
 
 在钩子函数上你可以修改原始返回值。
 
