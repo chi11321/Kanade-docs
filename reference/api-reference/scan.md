@@ -10,9 +10,9 @@ description: 高性能的存活检测，端口扫描和指纹识别接口。
 
 **`scan.alive(hosts: string, [timeout: number]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
-| 参数    | 类型   | 描述                       |
-| ------- | ------ | -------------------------- |
-| hosts   | string | CIDR格式地址               |
+| 参数      | 类型     | 描述              |
+| ------- | ------ | --------------- |
+| hosts   | string | CIDR格式地址        |
 | timeout | number | 超时时间（毫秒），默认5000 |
 
 ```lua
@@ -33,13 +33,13 @@ ICMP存活扫描。
 
 **`scan.port(host: string, ports: table, [protocol_scan: bool, vuln_scanners: number, timeout: number]):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
-| 参数           | 类型   | 描述                                                         |
-| -------------- | ------ | ------------------------------------------------------------ |
-| host           | string |                                                              |
-| ports          | table  | 端口列表                                                     |
-| protocol\_scan | bool   | 启用协议扫描                                                 |
+| 参数             | 类型     | 描述                                                                       |
+| -------------- | ------ | ------------------------------------------------------------------------ |
+| host           | string |                                                                          |
+| ports          | table  | 端口列表                                                                     |
+| protocol\_scan | bool   | 启用协议扫描                                                                   |
 | vuln\_scanners | number | 启用的漏洞扫描器，协议扫描未启用时不开启漏洞扫描。应根据[VulnScanType](scan.md#vulnscantype)相加获取最终值。 |
-| timeout        | number | 超时时间（毫秒），默认5000                                   |
+| timeout        | number | 超时时间（毫秒），默认5000                                                          |
 
 ```lua
 scan.port("192.168.31.1", scan.port.web, true, scan.vuln.ssh + scan.vuln.web):listen(function(res)
@@ -63,9 +63,9 @@ end)
 
 **`scan.nuclei(cfg: table):`** [<mark style="color:purple;">`FutureStream`</mark>](future.md#futurestream)
 
-| 参数 | 类型                                                | 描述 |
-| ---- | --------------------------------------------------- | ---- |
-| cfg  | table([NucleiScanConfig](scan.md#nucleiscanconfig)) |      |
+| 参数  | 类型                                                  | 描述 |
+| --- | --------------------------------------------------- | -- |
+| cfg | table([NucleiScanConfig](scan.md#nucleiscanconfig)) |    |
 
 nuclei模板扫描。nuclei扫描是非常消耗内存资源的操作，模板加载并不是复用的，应在单个扫描线程中选中更多扫描目标，而不是为少量目标单独创建多个扫描线程。
 
@@ -111,11 +111,11 @@ nuclei模板扫描。nuclei扫描是非常消耗内存资源的操作，模板�
 ### 🔗 `NucleiScanConfig`
 
 | 名称 | 类型 |
-| ---- | ---- |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
+| -- | -- |
+|    |    |
+|    |    |
+|    |    |
+|    |    |
 
 ### 🔗 `ScanResult`
 
@@ -134,27 +134,27 @@ nuclei模板扫描。nuclei扫描是非常消耗内存资源的操作，模板�
 
 ### 🔗 `PortScanResult`
 
-| 名称 | 类型        | 描述 |
-| ---- | ----------- | ---- |
-| host | string      |      |
-| port | number(u16) |      |
-| open | boolean     |      |
+| 名称   | 类型          | 描述 |
+| ---- | ----------- | -- |
+| host | string      |    |
+| port | number(u16) |    |
+| open | boolean     |    |
 
 ### 🔗 `ProtocolScanResult`
 
-| 名称   | 类型                          | 描述 |
-| ------ | ----------------------------- | ---- |
-| host   | string                        |      |
-| port   | number(u16)                   |      |
-| matchx | [MatchX](scan.md#matchx)\|nil |      |
+| 名称     | 类型                            | 描述 |
+| ------ | ----------------------------- | -- |
+| host   | string                        |    |
+| port   | number(u16)                   |    |
+| matchx | [MatchX](scan.md#matchx)\|nil |    |
 
 ### 🔗 `VulnScanResult`
 
-| 名称 | 类型                                 | 描述                                                         |
-| ---- | ------------------------------------ | ------------------------------------------------------------ |
-| type | [VulnScanType](scan.md#vulnscantype) |                                                              |
-| host | string                               |                                                              |
-| port | number(u16)                          |                                                              |
+| 名称   | 类型                                   | 描述                                                   |
+| ---- | ------------------------------------ | ---------------------------------------------------- |
+| type | [VulnScanType](scan.md#vulnscantype) |                                                      |
+| host | string                               |                                                      |
+| port | number(u16)                          |                                                      |
 | vuln | table                                | 类型太多了，并且计划支持自定义协议的扫描器，写不过来建议用json序列化看一下每个VulnInfo的结构 |
 
 ### 🔗 `MatchX`
@@ -192,11 +192,11 @@ nuclei模板扫描。nuclei扫描是非常消耗内存资源的操作，模板�
 
 ### 🔗 `NucleiMessage`
 
-| 名称      | 类型              |
-| --------- | ----------------- |
-| type      | NucleiMessageType |
-| timestamp | number            |
-| data      | any               |
+| 名称        | 类型                                             |
+| --------- | ---------------------------------------------- |
+| type      | [NucleiMessageType](scan.md#nucleimessagetype) |
+| timestamp | number                                         |
+| data      | any                                            |
 
 ## Enumerates:
 
@@ -221,12 +221,11 @@ nuclei模板扫描。nuclei扫描是非常消耗内存资源的操作，模板�
 
 ### 🔗 `NucleiMessageType`
 
-| 值   | 描述     |
-| ---- | -------- |
-| 0    | LOG      |
-| 1    | RESULT   |
-| 2    | ERROR    |
-| 3    | PROGRESS |
-| 4    | STATUS   |
-| 5    | TEMPLATE |
-
+| 值 | 描述       |
+| - | -------- |
+| 0 | LOG      |
+| 1 | RESULT   |
+| 2 | ERROR    |
+| 3 | PROGRESS |
+| 4 | STATUS   |
+| 5 | TEMPLATE |
