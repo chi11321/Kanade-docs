@@ -64,13 +64,14 @@ events.event1:set(cb)
 
 ## 🔗 `内置事件`
 
-| 名称                | 描述                 | 参数                                                                                                                                                                               |
-| ----------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| unload            | 当前脚本卸载时触发（仅当前脚本触发） |                                                                                                                                                                                  |
-| port\_scanned     | 端口扫描返回结果时触发钩子函数    | (host: <mark style="color:purple;">`string`</mark> ,port: <mark style="color:purple;">`number`</mark>)                                                                           |
-| alive\_scanned    | 存活扫描返回结果时触发钩子函数    | (host: <mark style="color:purple;">`string`</mark>)                                                                                                                              |
-| protocol\_scanned | 协议扫描返回结果时触发钩子函数    | (host: <mark style="color:purple;">`string`</mark>, port: <mark style="color:purple;">`number`</mark>,matchx: [<mark style="color:purple;">`IMatchX`</mark>](events.md#imatchx)) |
-| vuln\_scanned     | 漏洞扫描返回结果时触发钩子函数    | (url: <mark style="color:purple;">`string`</mark>, vuln: <mark style="color:purple;">`string`</mark>)                                                                            |
+| 名称              | 描述                                 | 参数                                                         |
+| ----------------- | ------------------------------------ | ------------------------------------------------------------ |
+| unload            | 当前脚本卸载时触发（仅当前脚本触发） |                                                              |
+| port\_scanned     | 端口扫描返回结果时触发钩子函数       | (host: <mark style="color:purple;">`string`</mark> ,port: <mark style="color:purple;">`number`</mark>) |
+| alive\_scanned    | 存活扫描返回结果时触发钩子函数       | (host: <mark style="color:purple;">`string`</mark>)          |
+| protocol\_scanned | 协议扫描返回结果时触发钩子函数       | (host: <mark style="color:purple;">`string`</mark>, port: <mark style="color:purple;">`number`</mark>,matchx: [<mark style="color:purple;">`IMatchX`</mark>](events.md#imatchx)) |
+| vuln\_scanned     | 漏洞扫描返回结果时触发钩子函数       | (url: <mark style="color:purple;">`string`</mark>, vuln: <mark style="color:purple;">`string`</mark>) |
+| nuclei_template   | Nuclei模板扫描返回结果时触发钩子函数 |                                                              |
 
 在钩子函数上你可以修改原始返回值。
 
